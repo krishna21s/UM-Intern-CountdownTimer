@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#8f8f8f, #383838);
+}
+
+.sub-main {
+  height: 80vh;
+  /* border: 1px solid white; */
+  width: 350px;
+  max-width: 350px;
+  background: linear-gradient(#8f8f8f, #1a1a1a 70%);
+  /* box-shadow: -4px 10px 12px 5px; */
+  box-shadow: -8px -8px 0px -1px rgba(95, 95, 95, 0.77), 2px -10px 15px -4px rgb(37, 37, 37);
+  border-radius: 18px;
+  position: relative; 
+}
+
+.outer-one {
+  filter: blur(8px);
+  background: linear-gradient(#6f6f6f, #4a4a4a 50%);
+  box-shadow: inset 0px 10px 0px 0px rgba(255, 255, 255, 0.11), 04px 15px 2px 10px rgba(0, 0, 0, 0.7), 0px 10px 0px 0px rgba(255, 255, 255, 0.071);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  /* box-shadow: 0px 10px 15px 0px rgb(0,0,0); */
+}
+
+.inner-one {
+  box-shadow: inset 0px 10px 10px 0px rgb(0, 0, 0, 0.333), inset 0px -10px 10px 2px rgb(7, 7, 7, 0.212);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(#6f6f6f, #3e3e3e);
+}
+
+.set-countdown {
+  color: rgb(91, 91, 91);
+
+}
+
+.set-countdown input {
+  color: gray;
+  background: none;
+  max-width: 40px;
+  box-shadow: 5px 4px 0px 0px rgb(46, 46, 46);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+.set-countdown:hover {
+  filter: blur(0px);
+}
+
+.set-countdown input:focus {
+  filter: blur(0px);
+  outline: none;
+}
+
+.btns button {
+  /* filter: blur(1px); */
+  background-color: #1a1a1a;
+  color: grey;
+  width: 100px;
+  border-radius: 7px;
+  transition: transform 0.08s linear;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btns button:hover {
+  background-color: #484848;
+  transition: 0.2s ease-in;
+  transform: scale(1.2);
+  filter: blur(0px);
+}
+
+.btns button:focus {
+  background-color: #484848;
+  filter: blur(0px);
+}
+
+/* bg  Animation*/
+.container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  animation: rotate 4s ease-out infinite;
+  filter: url("#gooey");
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container .liquid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #3f3f3f, #000000);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  --ani_dur: 60s;
+}
+
+.container .liquid:nth-child(1) {
+  top: 0;
+  animation: animate1 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(2) {
+  left: 0;
+  animation: animate2 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(3) {
+  left: 100%;
+  animation: animate3 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(4) {
+  top: 100%;
+  animation: animate4 var(--ani_dur) linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    left: 100%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    top: 100%;
+  }
+
+  50% {
+    top: 0;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+/*When CountDown started */
+.start-countdown {
+  color: rgb(89, 89, 89);
+ 
+}
+
+.start-countdown:hover {
+  color: rgb(89, 89, 89);
+ 
+  transition: 0.5s;
+}
+
+.info-div{
+  padding-top: 15px;
+  margin-right: 20px;
+  min-height: 30px;
+  color: #323232;
+
+}
+.info-div button{
+  border: 1px solid rgb(60, 60, 60);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.info-text{
+  max-height: 55px;
+  position: absolute;
+  left: -12px;
+  margin-right: 10px;
+  width: 80%;
+  border:1px solid rgb(67, 67, 67);
+  border-radius: 30px 0px 30px 30px;
+  font-size: 13px;
+  margin: 20px;
+}
